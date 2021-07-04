@@ -307,3 +307,35 @@ let studentScore = function(studentGrade, totalPossibleScore = 100){
 }
 let myGrade = studentScore(33)
 console.log(myGrade)
+
+console.log('SECTION 4:28')
+console.log('OBJECT BASICS')
+console.log('==== ==== ==== ==== ==== ==== ==== ====')
+console.log(``)
+
+let myBook = {
+    title : '1984',
+    author : 'George Orwell',
+    pageCount : 326
+}
+
+console.log(`${myBook.title} by ${myBook.author}`)
+
+myBook.title = 'Animal Farm'
+console.log(`${myBook.title} by ${myBook.author}`)
+
+// Challenge
+console.log('')
+console.log('CHALLENGE AREA')
+console.log('==== ==== ==== ==== ==== ==== ==== ====')
+
+// person name, age location
+let myPerson = {
+    name     : 'Ben',
+    age      :  77,
+    location : 'New England'
+}
+
+console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
+myPerson.age = myPerson.age + 33
+console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)

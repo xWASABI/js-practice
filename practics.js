@@ -6,7 +6,7 @@
 // { CODE BLOCK }
 
 // Learning
-console.log('SECTION 4:28')
+console.log('SECTION 4:29')
 console.log('OBJECT BASICS')
 console.log('==== ==== ==== ==== ==== ==== ==== ====')
 console.log(``)
@@ -17,26 +17,28 @@ let myBook = {
     pageCount : 326
 }
 
-console.log(`${myBook.title} by ${myBook.author}`)
+let otherBook = {
+    title: 'A Peoples History',
+    author: 'Howard Zinn',
+    pageCount: 723
+}
 
-myBook.title = 'Animal Farm'
-console.log(`${myBook.title} by ${myBook.author}`)
+let getSummary = function (book){
+    return {
+        summary: `${book.title} by ${book.author}`,
+        pageCountSummary: `${book.title} is ${book.pageCount} pages long`
+    }
+}
+
+let bookSummary = getSummary(myBook)
+let otherBookSummary = getSummary(otherBook)
+
+console.log(bookSummary.pageCountSummary)
 
 // Challenge
 console.log('')
 console.log('CHALLENGE AREA')
 console.log('==== ==== ==== ==== ==== ==== ==== ====')
-
-// person name, age location
-let myPerson = {
-    name     : 'Ben',
-    age      :  77,
-    location : 'New England'
-}
-
-console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
-myPerson.age = myPerson.age + 33
-console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
 
 
 
