@@ -339,3 +339,104 @@ let myPerson = {
 console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
 myPerson.age = myPerson.age + 33
 console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
+
+
+console.log('SECTION 4:29')
+console.log('USING OBJECTS WITH FUNCITONS')
+console.log('==== ==== ==== ==== ==== ==== ==== ====')
+console.log(``)
+
+let myBook = {
+    title : '1984',
+    author : 'George Orwell',
+    pageCount : 326
+}
+
+let otherBook = {
+    title: 'A Peoples History',
+    author: 'Howard Zinn',
+    pageCount: 723
+}
+
+let getSummary = function (book){
+    return {
+        summary: `${book.title} by ${book.author}`,
+        pageCountSummary: `${book.title} is ${book.pageCount} pages long`
+    }
+}
+
+let bookSummary = getSummary(myBook)
+let otherBookSummary = getSummary(otherBook)
+
+console.log(bookSummary.pageCountSummary)
+
+// Challenge
+console.log('')
+console.log('CHALLENGE AREA')
+console.log('==== ==== ==== ==== ==== ==== ==== ====')
+
+let convertFahrenheit = function (fahrenheit){
+    return {
+        fahrenheit: fahrenheit,
+        kelvin: (fahrenheit + 459.67) * (5 / 9),
+        celsius: (fahrenheit - 32) * (5 / 9)
+    }
+}
+
+let temps = convertFahrenheit(68)
+console.log(temps)
+
+// ========================================================================================
+console.log('SECTION 4:29')
+console.log('OBJECT REFERENCES')
+console.log('==== ==== ==== ==== ==== ==== ==== ====')
+console.log(``)
+
+// Challenge
+console.log('')
+console.log('CHALLENGE AREA')
+console.log('==== ==== ==== ==== ==== ==== ==== ====')
+
+
+let myAccount = {
+    name: 'Ben',
+    expenses: 0,
+    income: 0
+}
+
+let addIncome = function(account, amount){
+    account.income = account.income + amount
+}
+
+let addExpense = function(account, amount){
+    account.expenses = account.expenses + amount
+}
+
+let resetIncome = function(account){
+    account.income = 0,
+    account.expenses = 0
+}
+let getAccountSummary = function (account){
+    let balance = account.income - account.expenses
+    return `${account.name} has $${account.income} income and has $${account.expenses} in expenses. His remaining balance after expenses is ${balance}`
+}
+
+
+// Add Income
+addIncome(myAccount, 1000)
+// Add Expense
+addExpense(myAccount, 200)
+// Add Expense
+addExpense(myAccount, 300)
+// Get Account Summary
+console.log(getAccountSummary(myAccount))
+// Reset Account
+resetIncome(myAccount)
+console.log('')
+// Get Account Summary
+console.log(getAccountSummary(myAccount))
+
+
+// ========================================================================================
+
+

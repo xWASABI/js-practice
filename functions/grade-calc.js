@@ -6,7 +6,7 @@
 
 let getGrade = function(studentScore, totalScore = 100){
 
-    let grade = studentScore / totalScore * 100
+    const grade = studentScore / totalScore * 100
 
     if (grade <= 59){
 
