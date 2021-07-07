@@ -1,28 +1,32 @@
-// Create an array with five todos
+// 1. Convert array to array of objects -> text and completed
 const todo = [
-    'Read Bible',
-    'Study',
-    'Eat',
-    'Nap',
-    'Bills'
+    {
+        text: 'Read Bible',
+        completed: 1
+    },
+    {
+        text: 'Study',
+        completed: 0
+    },
+    {
+        text: 'Eat',
+        completed: 1
+    },
+    {
+        text: 'Nap',
+        completed: 0
+    },
+    {
+        text: 'Bills',
+        completed: 1
+    }
 ]
-// Delete the 3rd item
-// 1st number is array you want to remove and last number is how many after
-todo.splice(2, 1)
-// Add new item to the end
-todo.push('My new note')
-// Remove the first item from the list
-todo.splice(0, 1)
-let string = `You have ${todo.length} items remaining!`
-console.log(string)
-// first item
-// second item
-todo.forEach(function(item, index){
-    let num = index + 1
-    console.log(`${num}. ${item}`)
-})
-console.log('')
-
-for (let count = 0; count < todo.length; count++) {
-    console.log(todo[count])
+// 2. Create function to remove a todo by a text value
+const deleteTodo = function (todo, todoTitle){
+    return todo.find(function (todos, index){
+        return todos.text.toLowerCase() === todoTitle.toLowerCase()
+    }))
 }
+
+deleteTodo(todo, 'study')
+console.log(todo)
